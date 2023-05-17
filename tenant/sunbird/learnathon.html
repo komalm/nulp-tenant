@@ -159,20 +159,24 @@
 
   <div class="total-section">
     <div>
-      <div id="total" class="number">296</div>
+      <div id="total" class="number">363</div>
       <div class="num-cont">Total Registrations</div>
     </div>
     <div>
-      <div id="individual" class="number">179</div>
+      <div id="individual" class="number">254</div>
       <div class="num-cont">Individuals</div>
     </div>
     <div>
-      <div id="institution" class="number">66</div>
+      <div id="institution" class="number">109</div>
       <div class="num-cont">Groups</div>
     </div>
     <div>
-      <div id="cities" class="number">119</div>
+      <div id="cities" class="number">162</div>
       <div class="num-cont">Cities</div>
+    </div>
+    <div>
+      <div id="cities" class="number">251</div>
+      <div class="num-cont">Total Submissions</div>
     </div>
   </div>
   <!-- total section end here -->
@@ -439,7 +443,7 @@
     });
 
   </script>
-      <script>
+      <!-- <script>
         fetch("/counts")
           .then((response) => response.json())
           .then((data) => {
@@ -449,7 +453,7 @@
             document.querySelector("#institution").innerText = institutionCount;
             document.querySelector("#cities").innerText = cityCount;
           })
-        </script>
+        </script> -->
 </body>
 
 </html>
