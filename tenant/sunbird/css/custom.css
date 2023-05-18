@@ -205,7 +205,7 @@ header{
         transform: translate(-50%, -50%);
     }
     .deadline-ext-bar{
-        font-size: 18px;
+        font-size: 15px;
     }
     .sb-search-btn input{
         padding: 13px 0 0 24px;
@@ -2457,7 +2457,7 @@ section img{
 .deadline-cover {
     text-align: center;
     animation: animate 
-        1.9s linear infinite;
+        5.9s linear infinite;
 }
 
 @keyframes animate {
