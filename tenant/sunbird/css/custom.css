@@ -45,7 +45,7 @@ header{
     background-size: cover;
     color: #fff;
     box-shadow: none;
-    position: relative;
+    position: relative; 
 }
 .sb-baner-img{
     background-image: url(../images/newbanner.png) !important;
@@ -55,6 +55,21 @@ header{
 }
 .sb-baner-img3{
     background-image: url(../images/NULP_Learnathon_.jpg) !important;
+    background-size: cover;
+    width: 100%;
+    background-position: right;
+}
+.sbm-eng{
+    background-image: url(../images/SBM_english.png) !important;
+    background-size: cover;
+    width: 100%;
+    background-position: right;
+}
+.cursor-normal{
+    cursor: auto !important;
+}
+.sbm-hin{
+    background-image: url(../images/SBM-hindi.png) !important;
     background-size: cover;
     width: 100%;
     background-position: right;

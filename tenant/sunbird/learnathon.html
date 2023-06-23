@@ -59,7 +59,7 @@
   <div class="header-bg">
     <div class="deadline-ext-bar">
       <div class="deadline-box">
-        <div class="deadline-cover">Voting is open now. Vote for the entries you like by <span class="font-700">22nd June</span> and identify the winning solutions!
+        <div class="deadline-cover">Voting is closed now and we will publish the results by <span class="font-700">30th June</span>.
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
         
 
         <a class="text-white d-sm-none" href="./participate.html">WHO CAN PARTICIPATE</a>
-        <a href="/resources?learnathon" class="learn-btn text-white">VOTE NOW</a>
+        <a href="/resources?learnathon" class="learn-btn text-white">SIGN IN</a>
         <!-- <a href="/resources?learnathon" class="learn-btn text-white">VOTE NOW</a> -->
         <div class="ui compact menu learn-handburger">
           <div class="ui simple dropdown item icon-padding">
@@ -148,7 +148,7 @@
       </div>
       <div class="banner-cover flx-bsic">
         <div class="iframe-container">
-          <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/g5usSATr1tc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/4LvPB367NtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -159,25 +159,22 @@
 
   <div class="total-section">
     <div>
-      <div id="total" class="number">363</div>
+      <div id="total" class="number">101538</div>
       <div class="num-cont">Total Registrations</div>
     </div>
     <div>
-      <div id="individual" class="number">254</div>
-      <div class="num-cont">Individuals</div>
+      <div  class="number" id=voteCount >147052</div>
+      <div class="num-cont">Total Votes</div>
     </div>
     <div>
-      <div id="institution" class="number">109</div>
-      <div class="num-cont">Groups</div>
-    </div>
-    <div>
-      <div id="cities" class="number">162</div>
-      <div class="num-cont">Cities</div>
-    </div>
-    <div>
-      <div id="cities" class="number">251</div>
+      <div class="number">264</div>
       <div class="num-cont">Total Submissions</div>
     </div>
+    <div>
+      <div  class="number">51</div>
+      <div class="num-cont">Shortlisted Entries</div>
+    </div>
+
   </div>
   <!-- total section end here -->
 
@@ -338,7 +335,7 @@
         <div class="num-cont1 text-white">First Phase Results</div>
       </div>
       <div>
-        <div class="number1 text-white">22nd June</div>
+        <div class="number1 text-white">30th June</div>
         <div class="num-cont1 text-white">Final Results</div>
       </div>
     </div>
@@ -443,17 +440,33 @@
     });
 
   </script>
-      <!-- <script>
+      <script>
+        let voteCount;
+        $(function() {
+            $.ajax({
+                url: window.location.origin + '/voteCount',
+                type: "GET",
+                processData: false,
+                contentType: 'application/json',
+                success: function (response) {
+                  console.log("response====", response);
+                  voteCount = response.result.count
+                  document.getElementById("voteCount").innerHTML = response.result.count;
+                }
+            })
+        })
+    </script>
+      <script>
         fetch("/counts")
           .then((response) => response.json())
           .then((data) => {
             ({cityCount,groupCategoryCount,individualCategoryCount,institutionCount,totalCount} = data.result.data.liveLearnCounts[0]);
-            document.querySelector("#total").innerText = totalCount - 1;
+            document.querySelector("#total").innerText = totalCount-10; //until we block test users we are minusing test user count approximatly 10
             document.querySelector("#individual").innerText = individualCategoryCount;
             document.querySelector("#institution").innerText = institutionCount;
             document.querySelector("#cities").innerText = cityCount;
           })
-        </script> -->
+        </script>
 </body>
 
 </html>
