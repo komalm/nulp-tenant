@@ -457,16 +457,32 @@
         })
     </script>
       <script>
-        fetch("/counts")
+        // fetch("/counts")
+        //   .then((response) => response.json())
+        //   .then((data) => {
+        //     console.log("data.result.data.liveLearnCounts[0]====",data.result.data.liveLearnCounts[0])
+
+        //     // ({cityCount,groupCategoryCount,individualCategoryCount,institutionCount,totalCount} = data.result.data.liveLearnCounts[0]);
+            
+        //     document.querySelector("#total").innerText = data.result.data.liveLearnCounts[0].totalCount-10; //until we block test users we are minusing test user count approximatly 10
+        //     // document.querySelector("#individual").innerText = individualCategoryCount;
+        //     // document.querySelector("#institution").innerText = institutionCount;
+        //     // document.querySelector("#cities").innerText = cityCount;
+        //   })
+          fetch("/newRegistrations")
           .then((response) => response.json())
           .then((data) => {
-            ({cityCount,groupCategoryCount,individualCategoryCount,institutionCount,totalCount} = data.result.data.liveLearnCounts[0]);
-            document.querySelector("#total").innerText = totalCount-10; //until we block test users we are minusing test user count approximatly 10
-            document.querySelector("#individual").innerText = individualCategoryCount;
-            document.querySelector("#institution").innerText = institutionCount;
-            document.querySelector("#cities").innerText = cityCount;
+            console.log("data.result.data.liveLearnCounts[0]====",data)
+
+            // ({cityCount,groupCategoryCount,individualCategoryCount,institutionCount,totalCount} = data.result.data.liveLearnCounts[0]);
+            
+            document.querySelector("#total").innerText = data.result.data-10; //until we block test users we are minusing test user count approximatly 10
+            // document.querySelector("#individual").innerText = individualCategoryCount;
+            // document.querySelector("#institution").innerText = institutionCount;
+            // document.querySelector("#cities").innerText = cityCount;
           })
         </script>
+
 </body>
 
 </html>
