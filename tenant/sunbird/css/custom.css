@@ -45,7 +45,7 @@ header{
     background-size: cover;
     color: #fff;
     box-shadow: none;
-    position: relative; 
+    position: relative;
 }
 .sb-baner-img{
     background-image: url(../images/newbanner.png) !important;
@@ -58,24 +58,6 @@ header{
     background-size: cover;
     width: 100%;
     background-position: right;
-}
-.sbm-eng{
-    background-image: url(../images/SBM_english.png) !important;
-    background-size: cover;
-    width: 100%;
-    background-position: right;
-}
-.cursor-normal{
-    cursor: auto !important;
-}
-.sbm-hin{
-    background-image: url(../images/SBM-hindi.png) !important;
-    background-size: cover;
-    width: 100%;
-    background-position: right;
-}
-.sb-baner-img4{
-    background-image: url(../images/banner3.jpg) !important;
 }
 .sb-baner .banner-cover{
     padding-top: 70px;
@@ -197,31 +179,8 @@ header{
         padding: 0 15px !important;
     }
 }
-@media(min-width:320px){
-    .deadline-ext-bar{
-        position: absolute;
-        top: 0;
-        width: 100%;
-        padding: 20px 0;
-        background: #FFC142;
-        font-size: 9px;
-        text-align: center;
-    }
-    .deadline-box {
-        position: absolute;
-    }
-}
 
 @media(min-width:768px){
-    .deadline-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .deadline-ext-bar{
-        font-size: 15px;
-    }
     .sb-search-btn input{
         padding: 13px 0 0 24px;
     }
@@ -1209,7 +1168,7 @@ h1, h2, h3, h4, h5,
 }
 .footer a{
     color: #fff !important;
-    text-decoration: none;
+    /* text-decoration: none; */
   }
   .sb-bg-white{
     background: #ffffff;
@@ -1531,6 +1490,9 @@ section img{
 .mt-28{
     margin-top: 28px;
 }
+.total-numbers{
+    padding: 0px 70px !important;
+}
 /* new header design start here  */
 .header-bg{
     background-image: url("../images/SliderImage.png");
@@ -1563,7 +1525,7 @@ section img{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 68px;
+    gap: 50px;
     color: #fff !important;
 }
 .head-content{
@@ -2291,10 +2253,6 @@ section img{
     } */
 }
 @media (max-width:550px) {
-    .deadline-ext-bar {
-        position: absolute;
-        top: -12px;
-    }
     .learn-container{
         display: flex;
         flex-direction: column-reverse !important;
@@ -2463,28 +2421,20 @@ section img{
     background: #990000 !important;
     color: #fff !important;
 }
+
 .font-700{
     font-weight: 700;
 }
-
-
-
-.deadline-cover {
+.deadline-ext-bar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: #FFC142;
+    font-size: 20px;
     text-align: center;
-    animation: animate 
-        5.9s linear infinite;
 }
 
-@keyframes animate {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.7;
-    }
-
-    100% {
-        opacity: 0;
-    }
+.total-numbers{
+    padding: 0px 70px !important;
 }
