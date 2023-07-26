@@ -179,6 +179,20 @@ header{
         padding: 0 15px !important;
     }
 }
+@media(min-width:320px){
+    .deadline-ext-bar{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 20px 0;
+        background: #FFC142;
+        font-size: 9px;
+        text-align: center;
+    }
+    /* .deadline-box {
+        position: absolute;
+    } */
+}
 
 @media(min-width:768px){
     .sb-search-btn input{
@@ -351,7 +365,7 @@ header{
     .sb-baner {
         /* padding: 548px 0 750px 110px !important; */
         height: 659px;
-        margin-top: 106px
+        margin-top: 195px
     }
     /* .sb-baner h2{
         font-size: 4.4rem;
@@ -536,7 +550,7 @@ header{
     }
     .sb-baner {
         height: 614px;
-        margin-top: 124px;
+        margin-top: 230px;
     }
     /* .sb-search-btn{
         position: absolute;
@@ -2435,6 +2449,22 @@ section img{
     text-align: center;
 }
 
-.total-numbers{
-    padding: 0px 70px !important;
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.px-0{
+    padding: 10px 0 !important;
+}
+.pt-35{
+    padding-top: 35px !important;
 }
